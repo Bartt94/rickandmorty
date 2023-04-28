@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import { CharacterList } from "../src/pages/characterList.js";
 
-function App() {
+const App = () => {
+// function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <div className="row">
+          <p className="text-center fs-2">RICK AND MORTY</p>
+        </div>
+        <br/>
+        <div className="row justify-content-between">
+          <input className="col-9" type="search" placeholder="Search" aria-label="Search"/>
+          <button className="btn btn-outline-success col-2" type="submit">Search</button>
+        </div>
+        <br/>
+        <div className="row">
+          <CharacterList></CharacterList>
+        </div>
+      </div>
+    </>
   );
 }
 
