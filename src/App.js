@@ -78,7 +78,7 @@ const App = () => {
   const personajes = async () =>{
 
     let resp = await axios
-      .get("http://localhost:8080/personajes")
+      .get("http://ec2-44-210-109-10.compute-1.amazonaws.com:8000/personajes")
       .then((response) => {
         // console.log(response);
         return { ok: true, data: response.data };
