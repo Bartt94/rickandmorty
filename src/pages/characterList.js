@@ -13,7 +13,7 @@ export const CharacterList = () => {
   const personajes = async () =>{
 
     let resp = await axios
-      .get("http://localhost:8080/personajes")
+      .get("https://rickanmortyback-production.up.railway.app/personajes")
       .then((response) => {
         // console.log(response);
         return { ok: true, data: response.data };
